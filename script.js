@@ -32,11 +32,20 @@ let Alltext = document.querySelector("#text").innerText
 // reset_btn.onclick = () =>{
 
 // }
-
+let btn_state = true
 btn_toggle.onclick = () => {
-
-  btn_toggle.innerText = "display Author"
+if(btn_state)
+{
+   btn_toggle.innerText = "Display Author"
   author.innerText  = String(630610726-length.value)
+  btn_state = false
+}
+else{
+  btn_toggle.innerText = "Display Calculation"
+  author.innerText  = "630610726 CHANCHAI CHAISALEE"
+  btn_state =true
+}
+ 
   // your code here
 }
 
